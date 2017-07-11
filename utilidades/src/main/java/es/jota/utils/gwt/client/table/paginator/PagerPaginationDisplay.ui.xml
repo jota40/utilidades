@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<g:HTMLPanel tag="ul" styleName="pager">
+		<li class="previous"><g:Anchor ui:field="primero" href="javascript:;">primero</g:Anchor></li>
+		<li class="previous"><g:Anchor ui:field="anterior" href="javascript:;">Anterior</g:Anchor></li>
+		<li class="next"><g:Anchor ui:field="ultimo" href="javascript:;">Último</g:Anchor></li>
+		<li class="next"><g:Anchor ui:field="siguiente" href="javascript:;">Siguiente</g:Anchor></li>
+		<li>
+			<g:HTMLPanel ui:field="pagination" tag="ul" styleName="pagination"/>
+		</li>
+	</g:HTMLPanel>
+</ui:UiBinder>

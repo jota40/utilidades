@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder	xmlns:ui="urn:ui:com.google.gwt.uibinder"
+				xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<g:Anchor ui:field="link">
+		<label class="checkbox" style="margin-bottom: 0;">
+			<input ui:field="input" type="checkbox"/>
+			<span ui:field="text" class="label label-orden-filter"/>
+		</label>
+	</g:Anchor>
+</ui:UiBinder>

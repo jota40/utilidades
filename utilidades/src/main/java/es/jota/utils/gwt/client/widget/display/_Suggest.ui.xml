@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder	xmlns:ui="urn:ui:com.google.gwt.uibinder"
+				xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel>
+		<g:HTMLPanel tag="ul" ui:field="selections" styleName="list-group"/>
+		<div class="input-group">
+			<g:TextBox ui:field="input" styleName="form-control"/>
+			<g:HTMLPanel tag="ul" ui:field="suggestions" styleName="scrollable-menu dropdown-menu"/>
+			<span class="input-group-btn">
+				<g:Anchor ui:field="clean" styleName="btn btn-default">
+					<span aria-hidden="true">&times;</span>
+				</g:Anchor>
+				<g:Anchor ui:field="dropdown" styleName="btn btn-default">
+					<span ui:field="icono" class="caret"/>
+				</g:Anchor>
+	   		</span>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<!-- POM file generated with GWT webAppCreator -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>es.jota.utils.gwt</groupId>
+	<artifactId>utilidades</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0</version>
+	<name>es.jota.utils.gwt.utilidades</name>
+
+	<properties>
+		<!-- Convenience property to set the GWT version -->
+		<gwtVersion>2.8.1</gwtVersion>
+		<!-- <uplGwtVersion>0.6.6</uplGwtVersion> -->
+
+		<!-- GWT needs at least java 1.5 -->
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${gwtVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- GWT-upload
+		<dependency>
+			<groupId>com.googlecode.gwtupload</groupId>
+			<artifactId>gwtupload</artifactId>
+			<version>${uplGwtVersion}</version>
+		</dependency>
+ -->
+	</dependencies>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>es/jota/utils/gwt/client/enums/*.java</include>
+					<include>es/jota/utils/gwt/client/my/*.java</include>
+					<include>es/jota/utils/gwt/client/suggest/*.java</include>
+					<include>es/jota/utils/gwt/client/table/*.java</include>
+					<include>es/jota/utils/gwt/client/table/paginator/*.java</include>
+					<include>es/jota/utils/gwt/client/table/paginator/*.xml</include>
+					<include>es/jota/utils/gwt/client/utils/*.java</include>
+					<include>es/jota/utils/gwt/client/uploader/*.java</include>
+					<include>es/jota/utils/gwt/client/uploader/enums/*.java</include>
+					<include>es/jota/utils/gwt/client/uploader/interfaz/*.java</include>
+					<include>es/jota/utils/gwt/client/widget/display/*.java</include>
+					<include>es/jota/utils/gwt/client/widget/display/*.xml</include>
+					<include>es/jota/utils/gwt/client/widget/presenter/*.java</include>
+					<include>es/jota/utils/gwt/client/widget/presenter/events/*.java</include>
+					<include>es/jota/utils/gwt/client/widget/presenter/interfaz/*.java</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.20</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+<!-- 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+-->
+		</plugins>
+	</build>
+</project>
